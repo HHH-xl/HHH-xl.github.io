@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进行时：行业现状</title>
+    <script src="js/echarts.js"></script>
+	<script src="js/flexible.js"></script>
+
+	        <!--css links-->
+			<link rel="stylesheet" href="css/bundle.min.css">
+			<link rel="stylesheet" href="css/wow.css">
+			<link rel="stylesheet" href="css/owl.carousel.min.css">
+			<link rel="stylesheet" href="css/line-awesome.min.css">
+			<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<style type="text/css">
+		.head-sec{
+			height: auto;
+			width: auto;
+			background-color:rgb(254, 236, 252);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position-x: 100%;
+			background-position-y: 100%;
+		}
+
+		.banner-sec{
+			background-color:white;
+			opacity: 0.7;
+			margin-top: 5%;
+			padding-top: 8%;
+		}
+		.navbar{
+			opacity: 0.7;
+		}
+
+	</style>
+	
+<!--header sec start 导航-->
+<header class="head-sec ">
+<div class="container">
+<div class="top-navigation">
+	<nav class="navbar navbar-expand nav-up">
+		<a href="#"><img src="picture/logo.png" alt="logo"></a>
+
+		<div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+			<ul class="navbar-nav horizontal-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/index.html">它：虚拟主播</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/2路程：发展历程.html">路程：发展历程</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/3进行时：行业现状.html">进行时：行业现状</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/4Ta说：用户分析1.html">Ta说：用户分析</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/6远方：发展趋势.html">远方：发展趋势&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="navigation-toggle ml-auto d-block d-lg-none">
+			<ul class="slider-social toggle-btn" id="toggle-btn">
+				<li class="animated-wrap">
+					<a class="animated-element" href="javascript:void(0);">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+<!--Banner sec Start-->
+<section class="banner-sec" id="banner-sec">
+    <div class="container">
+        <div class="row no-gutters">
+			<div class="col-lg-6 banner-details">
+				<div class="banner-inner-content">
+					<h1 style="color:rgb(206, 76, 195);font-size: 0.5rem;text-align: center;" >行业现状</h1>
+					<p class="banner-text" style="text-indent:2em">2021年中国虚拟主播市场规模约3亿元，同比增长103.1%，行业进入快速增长阶段。随着元宇宙概念的兴起，虚拟主播行业收获了大量资本关注，行业在软硬件以及内容产出方面都呈现出爆发式增长。</p>
+					<p class="banner-text" style="text-indent:2em">同时，依托已经相对完备的直播市场，虚拟主播生态快速走向成熟。考虑到行业渗透还未见顶，以及可能出现的VR/AR硬件端普及，预计中国虚拟主播市场在未来 2年内仍将保持较高增速。</p>
+				</div>
+			</div>
+
+			<div id="main" style="width: 500px;height:300px;"></div>
+			<script type="text/javascript">
+			
+				//基于准备好的dom，初始化ECharts图表
+				var myChart = echarts.init(document.getElementById("main"));
+				var option = {  //指定图表的配置项和数据
+					tooltip: { trigger: 'axis' },
+					legend: { data: ['中国虚拟主播市场规模', '增长率'],
+					icon:'circle',
+					 left: 'center', top: 12 },
+					 toolbox: {  
+						show: true,
+						feature: {
+							mark: { show: true }, dataView: { show: true, readOnly: false },
+							restore: { show: true }, saveAsImage: { show: true }
+						}
+					},
+					xAxis: [
+						{
+							type: 'category',
+							data: ['2019', '2020', '2021', '2022', '2023', '2024']
+						}
+					],
+					yAxis: [
+						{   //设置两个Y轴之1：降水量
+							type: 'value', name: '市场规模（亿元）',
+							min: 0, max: 30 , interval: 5,
+							axisLabel: { formatter: '{value} ' }
+						},
+						{   //设置两个Y轴之2：蒸发量
+							type: 'value', name: '增长率（%）', min: 0, max: 200,
+							position: 'right',  //设置y轴安置的位置
+							offset: 0,  //设置向右偏移的距离
+							axisLine: { lineStyle: { color: '#5f90fc' } },
+							axisLabel: { formatter: '{value} ' }
+						}
+					],
+					series: [
+						{
+							name: '中国虚拟主播市场规模', type: 'bar',
+							itemStyle: {  //设置柱状图颜色
+								normal: {
+									color: '#c681ff'
+								}
+							},
+							data: [1, 1, 3, 6, 13, 25]
+						},
+						{
+							name: '增长率', type: 'line',
+							yAxisIndex: 1,  //指定使用第2个y轴
+							itemStyle: { normal: { color: '#5f90fc' } },  //设置折线颜色
+							data: [ ,129.7, 103.1, 131.8, 116.2, 97.1]
+						}
+					]
+		
+				//为echarts对象加载数据         
+			  };
+			myChart.setOption(option);
+			
+			</script>
+        </div>
+    </div>
+</section>
+<!--Banner sec end-->
+
+	        <script src="js/bundle.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/wow.min.js"></script>
+			<script src="js/parallaxie.min.js"></script>
+			<!--counter js links-->
+			<script src="js/script.js"></script>
+
+</body>
+</html>

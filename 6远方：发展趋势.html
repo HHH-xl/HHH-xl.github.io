@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>远方：发展趋势</title>
+    <script src="js/echarts.js"></script>
+	<script src="js/flexible.js"></script>
+    
+  	        <!--css links-->
+              <link rel="stylesheet" href="css/bundle.min.css">
+              <link rel="stylesheet" href="css/wow.css">
+              <link rel="stylesheet" href="css/owl.carousel.min.css">
+              <link rel="stylesheet" href="css/line-awesome.min.css">
+              <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            font-family: "Merriweather", serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+        width: 1473px;
+        height: 828px;
+        margin: auto;
+        background-image: url(image/图片1.png);
+        background-size: cover;
+	}
+
+        .shell {
+            display: flex;
+        }
+
+        .person {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin:0 50px;
+        }
+
+        .circle {
+            border-radius: 50%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transition: transform .3s;
+        }
+
+        .img {
+            position: relative;
+            width: 80%;
+            transform: translateY(80px);
+            transition: transform .3s;
+        }
+
+        .box:hover .img {
+            transform: translateY(26px) scale(1.2);
+        }
+
+        .box:hover .circle {
+            transform: rotate(20deg);
+        }
+
+        .wire {
+            background-color: rgb(200, 115, 123);
+            height: 2px;
+            width: 200px;
+            margin: 20px 0 20px 0;
+        }
+
+        .name {
+            color: rgb(169, 158, 226);
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        .content{
+            color: rgb(169, 158, 226);
+            font-size: 19px;
+            font-weight: 600;
+        }
+        .name2 {
+            color: rgb(251, 176, 79);
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        .content2{
+            color: rgb(251, 176, 79);
+            font-size: 19px;
+            font-weight: 600;
+        }
+        .name3 {
+            color: rgb(185, 227, 234);
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        .content3{
+            color: rgb(185, 227, 234);
+            font-size: 19px;
+            font-weight: 600;
+        }
+        .name4 {
+            color: rgb(242, 99, 77);
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        .content4{
+            color: rgb(242, 99, 77);
+            font-size: 19px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+
+<body>
+    <style type="text/css">
+		.head-sec{
+			height: auto;
+			width: auto;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position-x: 100%;
+			background-position-y: 100%;
+		}
+
+		.banner-sec{
+			background-color:rgb(254, 236, 252);
+
+			margin-top: 1%;
+			padding-top: 2%;
+		}
+		.navbar{
+			opacity: 0.5;
+		}
+
+	</style>
+	
+<!--header sec start 导航-->
+<header class="head-sec ">
+<div class="container">
+<div class="top-navigation">
+	<nav class="navbar navbar-expand nav-up">
+		<a href="#"><img src="picture/logo.png" alt="logo"></a>
+
+        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+            <ul class="navbar-nav horizontal-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="/index.html">它：虚拟主播</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="/2路程：发展历程.html">路程：发展历程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="/3进行时：行业现状.html">进行时：行业现状</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="/4Ta说：用户分析1.html">Ta说：用户分析</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="/6远方：发展趋势.html">远方：发展趋势&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+                </li>
+            </ul>
+        </div>
+
+		<div class="navigation-toggle ml-auto d-block d-lg-none">
+			<ul class="slider-social toggle-btn" id="toggle-btn">
+				<li class="animated-wrap">
+					<a class="animated-element" href="javascript:void(0);">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    
+    <div class="shell">
+        <div class="person">
+            <div class="box">
+                <img class="img" src="picture/4.png" style="position:relative;top:-29px;left:-159px;" />
+            </div>
+            <div class="name" style="position:relative;top: 289px;left: 259px">技术变革</div>
+            <div class="content" style="position:relative;top: 299px;left: 259px">随着主播服务型功能的凸显和流量资源向头部企业集中、直播内容日趋专业化、个性化并强调交互性，县备深度学习能力的
+                全数字化虚拟主播或许会获得更高的市场占有率。随着利润空间显现，AI驱动型主播更利于企业降本增效，因此对A驱动型
+                虚拟人和自然语言处理能力的研发是未来的方向，拥有巨大的市场空间。
+                </div>
+                <img src="picture/矩形 1.png" style="position:relative;top:-29px;left:259px;" />
+
+        </div>
+        
+
+        <div class="person">
+            <div class="box">
+                <img class="img" src="picture/5.png"style="position:relative;top:-79px;left:195px" />
+            </div>
+            <div class="name3" style="position:relative;top:225px;left:245px">社交关系</div>
+            <div class="content3" style="position:relative;top: 235px;left:245px">粉丝共创+私域营销的用户关系受到青睐，虚拟主播与粉丝形成强关系链接，不仅可以提升主播自身的跨平台影响力，大幅
+                弱化电商直播等场景下对真人主播的依赖；还可以强化宣发品牌认知，选择与虚拟主播跨界联合，可极低成本获得大量来自
+                粉丝的二次创作和UGC内容，强化其在Z时代受众中的知名度、好感度，为后续销量转化做铺垫。
+                </div>
+                <img src="picture/矩形 2.png" style="position:relative;top:-119px;left:245px;" />
+        </div>
+
+        <div class="person">
+            <div class="box">
+                <img class="img" src="picture/1.png" style="position:relative;top: -200px;left:540px"/>
+            </div>
+            <div class="name2" style="position:relative;top: 109px;left:219px">盈利模式</div>
+            <div class="content2" style="position:relative;top: 119px;left:219px">垂直领域主播+电商平台的模式将释放商业变现的潜力，刺激消费转化。关注虚拟主播的粉丝大多处于某种小众爱好自发聚
+                集，带有鲜明的社群属性，其分众化的倾向与垂直领域电商的盈利逻辑不谋而合，潜在转化率很高。随着直播技术使用门槛
+                和成本的降低，虚拟主播的用户逐渐从B端向C端下移，受众客群将进一步扩大。
+                </div>
+                <img src="picture/矩形 3.png" style="position:relative;top:-209px;left:219px;" />
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

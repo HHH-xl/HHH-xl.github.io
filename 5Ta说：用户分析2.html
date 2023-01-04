@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta说：用户分析2</title>
+    <script src="js/echarts.js"></script>
+	<script src="js/technology.js"></script>
+
+	        <!--css links-->
+			<link rel="stylesheet" href="css/bundle.min.css">
+			<link rel="stylesheet" href="css/wow.css">
+			<link rel="stylesheet" href="css/owl.carousel.min.css">
+			<link rel="stylesheet" href="css/line-awesome.min.css">
+			<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<style type="text/css">
+		.head-sec{
+			height: auto;
+			width: auto;
+			background-color:rgb(254, 236, 252);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position-x: 100%;
+			background-position-y: 100%;
+		}
+
+		.banner-sec{
+			background-color:white;
+			opacity: 0.7;
+			margin-top: 5%;
+			padding-top: 8%;
+		}
+		.navbar{
+			opacity: 0.7;
+		}
+
+	</style>
+	
+<!--header sec start 导航-->
+<header class="head-sec ">
+<div class="container">
+<div class="top-navigation">
+	<nav class="navbar navbar-expand nav-up">
+		<a href="#"><img src="picture/logo.png" alt="logo"></a>
+
+		<div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+			<ul class="navbar-nav horizontal-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/index.html">它：虚拟主播</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/2路程：发展历程.html">路程：发展历程</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/3进行时：行业现状.html">进行时：行业现状</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/4Ta说：用户分析1.html">Ta说：用户分析1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/5Ta说：用户分析2.html">Ta说：用户分析2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/6远方：发展趋势.html">远方：发展趋势&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="navigation-toggle ml-auto d-block d-lg-none">
+			<ul class="slider-social toggle-btn" id="toggle-btn">
+				<li class="animated-wrap">
+					<a class="animated-element" href="javascript:void(0);">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	
+
+
+
+<!--Banner sec Start-->
+<section class="banner-sec" id="banner-sec">
+    <div class="container">
+        <div class="row no-gutters">
+			<div class="col-lg-6 banner-details">
+				<div class="banner-inner-content">
+				</div>
+			</div>
+
+			<div id="main" style="width: 670px;height:440px;position:absolute;left:100px;top:190px;"></div>
+			<div id="container" style="width: 500px;height:600px;position:absolute;left:800px;top:100px;"></div>
+		  <script type="text/javascript">
+			var dom = document.getElementById('main');
+			var myChart = echarts.init(document.getElementById('main'),'technology'); 
+			var app = {};
+			
+			var option;
+		
+			option = {
+			  
+				title: {
+			text: '2022年中国虚拟主播用户认知渠道发布',
+			left: 265,
+			top:40,
+			textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			},
+		  },
+		
+		  tooltip: {
+			trigger: 'axis',
+			axisPointer: {
+			 
+			  type: 'shadow' 
+			}
+		  },
+		  legend: { 
+			textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			},
+		 
+		   top: 400,
+		   left:280
+		  },
+		  grid: {
+			left: 170,
+			
+			bottom: 70,
+			
+			containLabel: true
+		  },
+		  xAxis: {
+			type: 'value'
+		  },
+		  yAxis: {
+			type: 'category',
+			data: ['哔哩哔哩、抖音等视频/直播平台', '微博微信公众号等平台', '社交圈提及、熟人推荐', '线下漫展、推荐会', 'IP周边'],
+			axisLabel:{
+			  interval:0,
+			  textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			 
+			},
+			}
+		  },
+		  series: [
+			{
+			  name: '18-25岁用户占比（%）',
+			  type: 'bar',
+			  stack: 'total',
+			  label: {
+				show: true,
+			
+			  },
+			 
+			  emphasis: {
+				focus: 'series'
+			  },
+			  data: [81.7, 6.5, 5.4,2.2,4.3]
+			},
+			{
+			  name: '25-30岁用户占比（%）',
+			  type: 'bar',
+			  stack: 'total',
+			  label: {
+				show: true
+			  },
+			  emphasis: {
+				focus: 'series'
+			  },
+			  data: [81.3, 7.3, 8.1, 2.4, 0.8]
+			},
+			{
+			  name: '30岁以上用户占比（%）',
+			  type: 'bar',
+			  stack: 'total',
+			  label: {
+				show: true
+			  },
+			  emphasis: {
+				focus: 'series'
+			  },
+			  data: [74.7, 15.2, 10.1, 0, 0]
+			},
+			
+		  ]
+		};
+		
+			if (option && typeof option === 'object') {
+			  myChart.setOption(option);
+			}
+		
+			window.addEventListener('resize', myChart.resize);
+		
+			var chartDom = document.getElementById('container');
+		var myChart1 = echarts.init(document.getElementById('container'),'technology'); 
+		var option;
+		
+		option = {
+		  title: {
+			text: '2022年中国用户关注的主播元素',
+			right: 155,
+			top:130,
+			textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			},
+		  },
+		  tooltip: {
+			trigger: 'axis'
+		  },
+		  legend: {
+			top: 496,
+			data: [
+			  '用户认为最重要的元素选中占比（%）',
+			  '吸引用户观看新主播的因素选中占比（%）',
+			],
+			textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			},
+		  },
+		  radar: [
+			{
+			  indicator: [
+				{ text: '声音', max: 100 },
+				{ text: '形象', max: 100 },
+				{ text: '直播内容', max: 100 },
+				{ text: '人设', max: 100 }
+			  ],
+			  
+			  center: ['45%', '55%'],
+			  radius: 115,
+			  
+			}
+			],
+			textStyle: {
+			  color: "rgba(17, 17, 17, 1)"
+			},
+			series: [
+			{
+			  type: 'radar',
+			  tooltip: {
+				trigger: 'item'
+			  },
+			  areaStyle: {},
+			  data: [
+				{
+				  value: [34, 26.1, 26.0, 13.9],
+				  name: '用户认为最重要的元素选中占比（%）'
+				}
+			  ]
+			},
+			
+			{
+			  type: 'radar',
+			  tooltip: {
+				trigger: 'item'
+			  },
+			  areaStyle: {},
+			  data: [
+				{
+				  value: [18.8, 52.9, 24.8, 3.5],
+				  name: '吸引用户观看新主播的因素选中占比（%）'
+				}
+			  ]
+			},
+		  ],
+		};
+		
+		option && myChart1.setOption(option);
+			
+			</script>
+        </div>
+    </div>
+</section>
+<!--Banner sec end-->
+    
+    
+
+	        <script src="js/bundle.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/wow.min.js"></script>
+			<script src="js/parallaxie.min.js"></script>
+			<!--counter js links-->
+			<script src="js/script.js"></script>
+
+</body>
+</html>

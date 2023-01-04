@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta说：用户分析1</title>
+    <script src="js/echarts.js"></script>
+	<script src="js/technology.js"></script>
+
+	        <!--css links-->
+			<link rel="stylesheet" href="css/bundle.min.css">
+			<link rel="stylesheet" href="css/wow.css">
+			<link rel="stylesheet" href="css/owl.carousel.min.css">
+			<link rel="stylesheet" href="css/line-awesome.min.css">
+			<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<style type="text/css">
+		.head-sec{
+			height: auto;
+			width: auto;
+			background-color:rgb(254, 236, 252);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position-x: 100%;
+			background-position-y: 100%;
+		}
+
+		.banner-sec{
+			background-color:white;
+			opacity: 0.7;
+			margin-top: 5%;
+			padding-top: 8%;
+		}
+		.navbar{
+			opacity: 0.7;
+		}
+
+	</style>
+	
+<!--header sec start 导航-->
+<header class="head-sec ">
+<div class="container">
+<div class="top-navigation">
+	<nav class="navbar navbar-expand nav-up">
+		<a href="#"><img src="picture/logo.png" alt="logo"></a>
+
+		<div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+			<ul class="navbar-nav horizontal-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/index.html">它：虚拟主播</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/2路程：发展历程.html">路程：发展历程</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/3进行时：行业现状.html">进行时：行业现状</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/4Ta说：用户分析1.html">Ta说：用户分析1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/5Ta说：用户分析2.html">Ta说：用户分析2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll" href="/6远方：发展趋势.html">远方：发展趋势&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="navigation-toggle ml-auto d-block d-lg-none">
+			<ul class="slider-social toggle-btn" id="toggle-btn">
+				<li class="animated-wrap">
+					<a class="animated-element" href="javascript:void(0);">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+<!--Banner sec Start-->
+<section class="banner-sec" id="banner-sec">
+    <div class="container">
+        <div class="row no-gutters">
+			<div class="col-lg-6 banner-details">
+				<div class="banner-inner-content">
+					
+				</div>
+			</div>
+	
+	<div id="main" style="width: 600px;height:450px;position:absolute;left:140px;top:170px;"></div>
+	<div id="container" style="width: 600px;height:600px;position:absolute;left:750px;top:120px;"></div>
+	<script type="text/javascript">
+	   // 基于准备好的dom，初始化echarts实例
+	   var myChart = echarts.init(document.getElementById('main'),'technology');
+ 
+	   // 指定图表的配置项和数据
+	   var option = {
+		 title: {
+		   text: '2022年中国虚拟主播用户月收入分布',
+		 top:410,
+		 left:140,
+
+		 textStyle: {
+	 color: "rgba(17, 17, 17, 1)"
+   },
+		
+		 },
+	
+		 
+ xAxis: {
+   type: "category",
+   
+   data: ["3000元以下" , "3001-5000元" , "5001-8000元" , "8001-15000元" , "15000元以上"],
+   axisLabel:{
+	 interval:0,
+	 textStyle: {
+	 color: "rgba(17, 17, 17, 1)"
+   },
+   }
+ },
+
+		 yAxis: [{
+   type: "value",
+   show: false
+ }],
+ legend: {
+   top:15,
+   textStyle: {
+	 color: "rgba(17, 17, 17, 1)"
+   },
+ },
+		 series: [
+		   {
+			 name: '用户年龄占比（%）',
+			
+			 type: 'bar',
+			
+			 
+			 label: {
+	   show: true,
+	   position: 'top'
+	 },
+	 
+	 data: [3.8, 15.0, 37.9,30.9, 12.4]
+   
+		   }
+		   
+		 ]
+	   };
+ 
+	   // 使用刚指定的配置项和数据显示图表。
+	   myChart.setOption(option);
+	   
+	   var dom = document.getElementById('container');
+   var myChart1 = echarts.init(document.getElementById('container'),'technology');
+	
+   var app = {};
+   
+   var option;
+
+   option = {
+ title: {
+   text: '2022年中国虚拟主播用户城市线级情况',
+ 
+   left: 'center',
+   top:463,
+   textStyle: {
+	 color: "rgba(17, 17, 17, 1)"
+   },
+ },
+ tooltip: {
+   trigger: 'item'
+ },
+ legend: {
+   orient: 'vertical',
+   left: 'left',
+   top:67,
+   textStyle: {
+	 color: "rgba(17, 17, 17, 1)"
+   },
+ },
+ series: [
+   {
+	 name: '百分比',
+	 type: 'pie',
+	 radius: '50%',
+	 data: [
+	   { value: 40.1, name: '一线城市'},
+	   { value: 31.5, name: '二线城市' },
+	   { value: 23.3, name: '三线城市' },
+	   { value: 1.9, name: '四线城市' },
+	   { value: 3.2, name: '五线城市' }
+	   
+	 ],
+	 
+	 emphasis: {
+	   itemStyle: {
+		 shadowBlur: 10,
+		 shadowOffsetX: 0,
+		 shadowColor: 'rgba(0, 0, 0, 0.5)'
+	   }
+	 }
+   }
+ ]
+};
+
+   if (option && typeof option === 'object') {
+	 myChart1.setOption(option);
+   }
+
+   
+
+   window.onresize=function(){
+	   myChart.resize();
+	   myChart1.resize();
+	 }
+			
+	</script>
+    </div>
+    </div>
+</section>
+<!--Banner sec end-->
+    
+    
+
+	        <script src="js/bundle.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/wow.min.js"></script>
+			<script src="js/parallaxie.min.js"></script>
+			<!--counter js links-->
+			<script src="js/script.js"></script>
+
+</body>
+</html>
